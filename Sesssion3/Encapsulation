@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class vehical
+{
+    private:  
+    float speed,distance,time;  // data members
+    public:
+    void getdata(int sp,int dis)  // function using only data members
+    {
+        speed=sp;
+        distance=dis;
+    }
+    float setdata()       // function using only data members
+    {
+        time=distance/speed;
+        return time;  
+    }
+};
+int main()
+{
+    vehical v;  // instance of class
+    v.getdata(70,245); // functiona call ( WANR )
+    float t=v.setdata();  // function call ( NAWR )
+    cout<<t<<endl;   // display time
+    return 0;
+}
