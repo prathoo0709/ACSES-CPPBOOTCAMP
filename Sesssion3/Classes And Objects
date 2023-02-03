@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class vehical             // class
+{
+    public:
+    string color,brand;   // Attributes or member variables 
+
+    void drive()          // Methods
+    {
+       cout<<"Get in the "<<color<<" "<<brand<<" car"<<" And Drive"<<endl;
+    }
+    void brake()         // Methods
+    {
+        cout<<"Stop the car"<<endl;
+    }
+};
+
+int main()
+{
+    vehical car;   // object 
+    
+    car.color="White";
+    car.brand="Audi";
+    car.drive();
+    car.brake();
+    return 0;
+}
