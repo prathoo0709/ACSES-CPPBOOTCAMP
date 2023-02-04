@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class car
+{
+    public:
+    void accelerate(int spd)
+    {
+        cout<<"Now Car is moving with "<<spd<<" kms/hr"<<endl;
+    }
+};
+
+class vehical
+{
+    public:
+    void drive(car c,int speed)
+    {
+        cout<<"Move a car faster"<<endl;
+        c.accelerate(speed);  
+    }
+};
+
+int main()
+{
+vehical v;
+car c;
+v.drive(c,90);
+
+}
