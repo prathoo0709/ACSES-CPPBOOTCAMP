@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class vehical
+{
+    int speed,distance;
+    public:
+    vehical() // default constructor
+    {
+        speed =40;
+        distance =120;
+    }
+    vehical(int s,int d)  // parameteresized constructors
+    {
+        speed =s;
+        distance=d;
+    }
+    vehical(vehical &v1)   // copy constructors 
+    {
+        speed=v1.speed;
+        distance=v1.distance;  
+    }
+    void disp()
+    {
+        cout<<speed<<" "<<distance<<endl;
+    }
+    ~vehical()
+    {
+        cout<<"Destructor"<<endl;
+        cout<<speed<<" "<<distance<<endl;
+    } 
+};
+
+int main()
+{
+    vehical v;
+    v.disp();
+
+    vehical v1(30,69);
+    v1.disp();
+
+    vehical v2(v1);
+    v2.disp();
+    return 0;
+  
+}
