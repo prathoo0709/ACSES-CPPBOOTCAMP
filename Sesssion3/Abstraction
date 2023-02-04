@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class numbers
+{
+    private:
+    int a,b;
+    public:
+    void get(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void swap()   // this implimentation is hidden
+    {
+        int t;
+        t=a;
+        a=b;
+        b=t;
+    }
+    void display()
+    {
+        cout<<"a="<<a<<" b ="<<b<<endl;
+    }
+};
+int main()
+{
+   numbers n;
+   n.get(10,12);   // input details are provided 
+   n.swap();
+   n.display();  // output details are provided
+}
